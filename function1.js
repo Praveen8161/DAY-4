@@ -58,7 +58,7 @@ console.log(palindrome);
 console.groupEnd();
 
 console.group("Return median of two sorted arrays of the same size");
-let median = function(arr1,arr2){
+(function (arr1,arr2){
     let result;
     let arrMerged = [...arr1,...arr2].sort();
     if(arrMerged.length % 2 === 0){
@@ -70,8 +70,7 @@ let median = function(arr1,arr2){
         result = arrMerged[div];
     }
     console.log(result);
-}
-median(arr1,arr2);
+})(arr1,arr2);
 console.groupEnd();
 
 console.group("Remove duplicates from an array");
